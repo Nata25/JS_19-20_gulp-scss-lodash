@@ -6,23 +6,281 @@
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
-        <header>
+        <header class="top-content">
 
             <div class="logo">
                 <span class="logo__main-text">Build Home</span>
                 <span class="logo__sub-text">Industrial Theme</span>
             </div>
 
-            <nav class="nav">
-                <a href="#">Home</a>
-                <a href="#">Features</a>
-                <a href="#">Services</a>
-                <a href="#">News</a>
-                <a href="#">Shop</a>
-            </nav>
-        </header>
-        <main>
+            <div class="social">
+                <a class="social__link social__link_fb" href="#"></a>
+                <a class="social__link social__link_twitter" href="#"></a>
+                <a class="social__link social__link_rss" href="#"></a>
+                <a class="social__link social__link_linkedin" href="#"></a>
+                <a class="social__link social__link_skype" href="#"></a>
+            </div>
 
+            <nav class="nav">
+                <a class="nav__item" href="#">Home</a>
+                <a class="nav__item" href="#">Features</a>
+                <a class="nav__item" href="#">Services</a>
+                <a class="nav__item" href="#">News</a>
+                <a class="nav__item" href="#">Shop</a>
+            </nav>
+
+            <form class="search-form" action="#" method="post">
+                <input type="text" name="search" value="">
+            </form>
+
+        </header>
+        <main class="content">
+            <section class="slider">
+                <div class="slider-container">
+                    <ul>
+                        <li class="slider__item">Build your business</li>
+                        <li class="slider__item">Build your business</li>
+                        <li class="slider__item">Build your business</li>
+                    </ul>
+                </div>
+                <div class="slider__controls">
+                    <span class="slider__switches"></span>
+                    <span class="slider__switches"></span>
+                    <span class="slider__switches"></span>
+                </div>
+            </section>
+
+            <section class="info">
+                <div class="info__block">
+                    <span class="info__num">01</span>
+                    <h3 class="info__heading">Power Inside</h3>
+                    <p class="info__text">Cum sociis natoque penatibus et magnis
+                        dis parturient montesmus. Pro vel nibh et elit mollis commodo
+                        et nec augueique Nemo enim ipsam voluptatem quia
+                        ptas sit aspernatur samomo enim ipsam voluptatem.
+                    </p>
+                    <a class="info__link" href="#">Read More</a>
+                </div>
+
+                <div class="info__block">
+                    <span class="info__num">02</span>
+                    <h3 class="info__heading">New Technologies</h3>
+                    <p class="info__text">Cum sociis natoque penatibus et magnis
+                        dis parturient montesmus. Pro vel nibh et elit mollis commodo
+                        et nec augueique Nemo enim ipsam voluptatem quia
+                        ptas sit aspernatur samomo enim ipsam voluptatem.
+                    </p>
+                    <a class="info__link" href="#">Read More</a>
+                </div>
+
+                <div class="info__block">
+                    <span class="info__num">03</span>
+                    <h3 class="info__heading">Fast Support</h3>
+                    <p class="info__text">Cum sociis natoque penatibus et magnis
+                        dis parturient montesmus. Pro vel nibh et elit mollis commodo
+                        et nec augueique Nemo enim ipsam voluptatem quia
+                        ptas sit aspernatur samomo enim ipsam voluptatem.
+                    </p>
+                    <a class="info__link" href="#">Read More</a>
+                </div>
+            </section>
+
+            <section class="grid">
+
+                <h2 class="content__heading content__heading_white">Our Services</h2>
+                <a href="#">
+                    <figure>
+                        <img src="img/service.png" alt="Schedule Services">
+                        <figcaption>Schedule Services</figcaption>
+                    </figure>
+                </a>
+
+                <a href="#">
+                    <figure>
+                        <img src="img/maintence.png" alt="Preventive Maintence">
+                        <figcaption>Preventive Maintence</figcaption>
+                    </figure>
+                </a>
+
+                <a href="#">
+                    <figure>
+                        <img src="img/wheel.png" alt="Tire &amp; Wheel Services">
+                        <figcaption>Tire &amp; Wheel Services</figcaption>
+                    </figure>
+                </a>
+
+                <a href="#">
+                    <figure>
+                        <img src="img/repare.png" alt="Repair Services">
+                        <figcaption>Repair Services</figcaption>
+                    </figure>
+                </a>
+
+            </section>
+
+            <section class="column news">
+                <h2 class="content__heading">Latest News</h2>
+
+                <article class="news__article">
+                    <div class="news__date">
+                        <span class="news__month">Jan</span>
+                        <span class="news__day">23</span>
+                    </div>
+                    <img class="news__image" src="img/mechanical-engineer-design-engineer.png" alt="Mechanical Engineer, Design Engineer">
+                    <h3 class="news__heading">Advanced Machinery Helps Improve Quality</h3>
+                    <div class="news__rubric">by <span class="news__link">cmsmasters</span></div>
+                    <div class="news__rubric">Comments (<span class="news__link">6</span>)</div>
+                    <p class="news__text">Cum sociis natoque penatibus et magnis dis parturient ontesmus.
+                         Pro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem
+                         quia ptas sit aspernatur samomo enim ipsam voluptatem.</p>
+                </article>
+
+                <article class="news__article">
+                    <div class="news__date">
+                        <span class="news__month">Jan</span>
+                        <span class="news__day">21</span>
+                    </div>
+                    <img class="news__image" src="img/electrical-engineer.png" alt="Electrical Engineer">
+                    <h3 class="news__heading">Powerful Techniques for Advanced Service</h3>
+                    <div class="news__rubric">by <span class="news__link">cmsmasters</span></div>
+                    <div class="news__rubric">Comments (<span class="news__link">3</span>)</div>
+                    <p class="news__text">Cum sociis natoque penatibus et magnis dis parturient ontesmus.
+                         Pro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem
+                         quia ptas sit aspernatur samomo enim ipsam voluptatem.</p>
+                </article>
+
+            </section>
+
+            <section class="column">
+
+                <h2 class="content__heading">Banners Place</h2>
+
+                <details>
+                    <summary>Accordion Panel 1</summary>
+                    <p>Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel
+                        nibh et elit mollis commodo et nec augueique Nemo enim ipsam
+                        voluptatem quia ptas sit aspernatur momo. Cum sociis natoque
+                        penatibus et magnis dis parturient ontesmus. Nemo enim ipsam
+                        voluptatem quia ptas sit aspernatur samomoPro vel nibh et elit
+                        mollis commodo et nec augueique Nemo enim ipsam voluptatem quia
+                        ptas sit aspernatur samomo enim ipsam voluptatem.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Accordion Panel 2</summary>
+                    <p>Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel
+                        nibh et elit mollis commodo et nec augueique Nemo enim ipsam
+                        voluptatem quia ptas sit aspernatur momo. Cum sociis natoque
+                        penatibus et magnis dis parturient ontesmus. Nemo enim ipsam
+                        voluptatem quia ptas sit aspernatur samomoPro vel nibh et elit
+                        mollis commodo et nec augueique Nemo enim ipsam voluptatem quia
+                        ptas sit aspernatur samomo enim ipsam voluptatem.
+                    </p>
+
+                </details>
+
+                <details>
+                    <summary>Accordion Panel 3</summary>
+                    <p>Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel
+                        nibh et elit mollis commodo et nec augueique Nemo enim ipsam
+                        voluptatem quia ptas sit aspernatur momo. Cum sociis natoque
+                        penatibus et magnis dis parturient ontesmus. Nemo enim ipsam
+                        voluptatem quia ptas sit aspernatur samomoPro vel nibh et elit
+                        mollis commodo et nec augueique Nemo enim ipsam voluptatem quia
+                        ptas sit aspernatur samomo enim ipsam voluptatem.
+                    </p>
+
+                </details>
+
+                <details>
+                    <summary>Accordion Panel 4</summary>
+                    <p>Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel
+                        nibh et elit mollis commodo et nec augueique Nemo enim ipsam
+                        voluptatem quia ptas sit aspernatur momo. Cum sociis natoque
+                        penatibus et magnis dis parturient ontesmus. Nemo enim ipsam
+                        voluptatem quia ptas sit aspernatur samomoPro vel nibh et elit
+                        mollis commodo et nec augueique Nemo enim ipsam voluptatem quia
+                        ptas sit aspernatur samomo enim ipsam voluptatem.
+                    </p>
+
+                </details>
+
+            </section>
+
+            <section class="partners">
+                <a class="partners__link" href="#">
+                    <img src="img/partners/rbp_wheels.png" alt="RBP Wheels" />
+                </a>
+
+                <a class="partners__link" href="#">
+                    <img src="img/partners/moto_metal.png" alt="Moto Metal" />
+                </a>
+
+                <a class="partners__link" href="#">
+                    <img src="img/partners/2crave.png" alt="2 Crave" />
+                </a>
+
+                <a class="partners__link" href="#">
+                    <img src="img/partners/atx_series.png" alt="ATX Series" />
+                </a>
+
+                <a class="partners__link" href="#">
+                    <img src="img/partners/cruiser_alloy.png" alt="Cruiser Alloy" />
+                </a>
+
+                <a class="partners__link" href="#">
+                    <img src="img/partners/gear.png" alt="Gear" />
+                </a>
+            </section>
         </main>
+
+        <footer class="footer">
+            <nav class="footer__nav">
+                <ul class="footer__nav-section">
+                    <li>Socials</li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Flickr</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Vimeo</a></li>
+                    <li><a href="#">Google Plus</a></li>
+                </ul>
+
+                <ul class="footer__nav-section">
+                    <li>Links</li>
+                    <li><a href="#">How to Write a Blog</a></li>
+                    <li><a href="#">Create a Blog in 4 Steps</a></li>
+                    <li><a href="#">15 Tips to Increase Traffic</a></li>
+                    <li><a href="#">Vimeo</a></li>
+                    <li><a href="#">20 Blog Post Ideas</a></li>
+                </ul>
+
+                <ul class="footer__nav-section">
+                    <li>Blogroll</li>
+                    <li><a href="#">Blogs Blog</a></li>
+                    <li><a href="#">Roll Up Roll Up</a></li>
+                    <li><a href="#">Blog Free</a></li>
+                    <li><a href="#">Vimeo</a></li>
+                    <li><a href="#">Wordpress Blog</a></li>
+                </ul>
+
+                <ul class="footer__nav-section">
+                    <li>About us</li>
+                    <li><a href="#">Agriculture</a></li>
+                    <li><a href="#">Harvest</a></li>
+                    <li><a href="#">Company news</a></li>
+                    <li><a href="#">Investor relations</a></li>
+                </ul>
+
+            </nav>
+
+            <div class="footer__contacts">
+                <span class="footer__address">BuildHomeLtd.  Street Name 123   23 45 Cityname</span>
+                <span class="footer__tel">+123 900 123 456</span>
+                <span class="footer__mail"><a href="mailto:info@buildhome.web" target="_blank">info@buildhome.web</a></span>
+
+            </div>
+
+        </footer>
     </body>
 </html>
