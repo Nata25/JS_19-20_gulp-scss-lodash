@@ -1,6 +1,6 @@
 @mixin flex_row {
     display: flex;
-    flex: row nowrap;
+    flex-flow: row nowrap;
 }
 
 @mixin ubuntu {
@@ -9,4 +9,13 @@
 
 @mixin ubuntu_condensed {
     font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+@mixin reset {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin bgIcon($filename) {
+    background-image: url('../img/icons/' + $filename + '.png');
 }

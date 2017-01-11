@@ -6,6 +6,12 @@ body {
     // background-color: red;
 }
 
+.top-content,
+.info {
+    max-width: 1160px;
+    margin: 0 auto;
+}
+
 .logo {
     @include ubuntu;
 }
@@ -24,7 +30,6 @@ body {
 
 .nav {
     @include flex_row;
-    width: 1160px;
     margin: 0 auto;
     background-color: #2a2d32;
     @include ubuntu_condensed;
@@ -47,7 +52,7 @@ body {
         }
 
         &_active {
-            background-color: #248cec;
+            background-color: $lightblue;
         }
     }
 }
@@ -71,23 +76,63 @@ body {
     justify-content: space-between;
     @include ubuntu;
 
+    &__block {
+        display: flex;
+        flex-flow: column wrap;
+        flex: 1 0 auto;
+        margin: 0 auto;
+
+        &:first-child .info__heading::before {
+            @include bgIcon('settings');
+        }
+
+        &:nth-child(2) .info__heading::before {
+            @include bgIcon('params');
+        }
+
+        &:last-child .info__heading::before {
+            @include bgIcon('truck');
+        }
+    }
+
     &__num {
+        flex-basis: 100%;
+        margin-right: 30px;
         @include ubuntu;
-        font-size: 90px;
+        font-size: 75px;
         color: #2a2b2e;
         opacity: 0.1;
     }
 
     &__heading {
+        @include reset;
+        margin-top: 15px;
+        margin-bottom: 15px;
         color: $dark;
+        font-size: 15px;
+
+        &::before {
+            display: block;
+            margin-bottom: 10px;
+            width: 35px;
+            height: 40px;
+            content: '';
+            background-repeat: no-repeat;
+        }
     }
 
     &__text {
+        width: 250px;
+        @include reset;
         color: $grey;
+        font-size: 13px;
+        line-height: 20px;
     }
 
     &__link {
-        position: relative;
+        display: block;
+        margin-top: 10px;
+        font-size: 13px;
         color: $dark;
         text-decoration: none;
 
