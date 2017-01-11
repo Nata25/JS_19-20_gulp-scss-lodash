@@ -31,20 +31,35 @@
 
         </header>
         <main class="content">
-            <section class="slider">
-                <div class="slider-container">
-                    <ul>
-                        <li class="slider__item">Build your business</li>
-                        <li class="slider__item">Build your business</li>
-                        <li class="slider__item">Build your business</li>
-                    </ul>
-                </div>
-                <div class="slider__controls">
-                    <span class="slider__switches"></span>
-                    <span class="slider__switches"></span>
-                    <span class="slider__switches"></span>
+            <section class="slider jcarousel">
+                <div class="slider__container">
+                    <figure class="slider__item">
+                        <img class="slider__image" src="img/slider1.png" alt="Construction"/>
+                        <figcaption class="slider__text">
+                            <span class="slider__text_emphasized">Build</span>
+                            <span>your</span>
+                            <span>business</span>
+                        </figcation>
+                    </figure>
+                    <figure class="slider__item">
+                        <img class="slider__image" src="img/slider1.png" alt="Construction"/>
+                        <figcaption class="slider__text">
+                            <span class="slider__text_emphasized">Build</span>
+                            <span>your</span>
+                            <span>business</span>
+                        </figcation>
+                    </figure>
+                    <figure class="slider__item">
+                        <img class="slider__image" src="img/slider1.png" alt="Construction"/>
+                        <figcaption class="slider__text">
+                            <span class="slider__text_emphasized">Build</span>
+                            <span>your</span>
+                            <span>business</span>
+                        </figcation>
+                    </figure>
                 </div>
             </section>
+            <div class="slider__controls jcarousel-pagination"></div>
 
             <section class="info">
                 <div class="info__block">
@@ -275,5 +290,9 @@
             </div>
 
         </footer>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.jcarousel.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
     </body>
 </html>

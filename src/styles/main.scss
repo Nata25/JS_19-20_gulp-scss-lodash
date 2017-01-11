@@ -7,8 +7,10 @@ body {
 }
 
 .top-content,
-.info {
+.info,
+.slider {
     max-width: 1160px;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -70,6 +72,82 @@ body {
         line-height: 20px;
     }
 }
+
+/* ____________ Carousel _____________*/
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+    margin: 0 auto;
+
+    &__container {
+        position: relative;
+        width: 300%;
+    }
+
+    &__item {
+        position: relative;
+        @include reset;
+        margin-top: 40px;
+        float: left;
+        width: 33.33%;
+    }
+
+    &__imagee {
+
+    }
+
+    &__controls {
+        position: relative;
+        top: -45px;
+        margin: 0 auto;
+        width: 100px;
+    }
+
+    &__switch {
+        display: inline-block;
+        margin: 5px;
+        width: 15px;
+        height: 15px;
+        border: 1px solid #eee;
+        background-color: #fff;
+        box-sizing: border-box;
+
+        &.active {
+            border-width: 2px;
+            background-color: $dark;
+        }
+    }
+
+    &__text {
+        position: absolute;
+        top: 210px;
+        left: 45px;
+        width: 212px;
+        color: #fff;
+        @include ubuntu;
+        font-size: 54px;
+        font-weight: bold;
+        line-height: 60px;
+        text-transform: uppercase;
+
+        > * {
+            display: inline-block;
+            padding: 7px 48px 7px 21px;
+            background-color: rgba(0, 0, 0, .5);
+        }
+    }
+
+    &__text_emphasized {
+        display: block;
+        color: #f4b60d;
+    }
+
+
+}
+
+/*_______________ Info Block ____________ */
 
 .info {
     @include flex_row;
