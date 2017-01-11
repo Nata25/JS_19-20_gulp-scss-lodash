@@ -3,7 +3,7 @@
 @import 'variables';
 
 body {
-    background-color: red;
+    // background-color: red;
 }
 
 .logo {
@@ -69,11 +69,45 @@ body {
 .info {
     @include flex_row;
     justify-content: space-between;
+    @include ubuntu;
 
     &__num {
         @include ubuntu;
         font-size: 90px;
         color: #2a2b2e;
         opacity: 0.1;
+    }
+
+    &__heading {
+        color: $dark;
+    }
+
+    &__text {
+        color: $grey;
+    }
+
+    &__link {
+        position: relative;
+        color: $dark;
+        text-decoration: none;
+
+        &:hover {
+            color: $lightblue;
+        }
+
+        &::after {
+            position: relative;
+            display: inline-block;
+            top: 2px;
+            left: 6px;
+            width: 10px;
+            height: 9px;
+            content: '\2192';
+            color: $lightblue;
+        }
+
+        &:hover::after {
+            color: $grey;
+        }
     }
 }
