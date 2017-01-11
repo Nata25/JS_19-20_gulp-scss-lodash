@@ -1,0 +1,12 @@
+@mixin flex_row {
+    display: flex;
+    flex: row nowrap;
+}
+
+@mixin ubuntu {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+@mixin ubuntu_condensed {
+    font-family: 'Ubuntu Condensed', sans-serif;
+}

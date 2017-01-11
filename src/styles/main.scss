@@ -1,4 +1,79 @@
+@import 'fonts';
+@import 'mixins';
+@import 'variables';
+
+body {
+    background-color: red;
+}
+
+.logo {
+    @include ubuntu;
+}
+
+.logo__sub-text {
+    display: block;
+}
+
+.social {
+    float: right;
+}
+
+.social__link {
+
+}
+
 .nav {
+    @include flex_row;
+    width: 1160px;
+    margin: 0 auto;
     background-color: #2a2d32;
-    color: blue;
+    @include ubuntu_condensed;
+
+    &__item {
+        display: inline-block;
+        margin: 0;
+        padding: 20px 40px;
+        list-style-type: none;
+        color: #fff;
+        border-right: 1px solid $dark;
+        cursor: pointer;
+        font-size: 14px;
+        line-height: 20px;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        &:hover {
+            color: #f4b60d;
+        }
+
+        &_active {
+            background-color: #248cec;
+        }
+    }
+}
+
+.search-form {
+    float: right;
+
+    input {
+        margin-top: 10px;
+        width: 200px;
+        padding: 10px;
+        background-color: #32353a;
+        color: #eee;
+        border: 1px solid #000;
+        line-height: 20px;
+    }
+}
+
+.info {
+    @include flex_row;
+    justify-content: space-between;
+
+    &__num {
+        @include ubuntu;
+        font-size: 90px;
+        color: #2a2b2e;
+        opacity: 0.1;
+    }
 }
