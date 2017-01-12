@@ -32,8 +32,8 @@ gulp.task("serve", ['scss'], function() {
 gulp.task("scss", function() {
     gulp.src("src/styles/main.scss")
     .pipe(scss())
-    .pipe(cleanCSS())
-    .pipe(rename('main.min.css'))
+    // .pipe(cleanCSS())
+    // .pipe(rename('main.min.css'))
     .pipe(gulp.dest("app/css"))
     .pipe(browserSync.reload({
       stream: true

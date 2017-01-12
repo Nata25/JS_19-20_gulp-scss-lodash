@@ -11,6 +11,11 @@
     font-family: 'Ubuntu Condensed', sans-serif;
 }
 
+@mixin white_link {
+    color: #fff;
+    text-decoration: none;
+}
+
 @mixin reset {
     margin: 0;
     padding: 0;
