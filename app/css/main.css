@@ -13,11 +13,21 @@
   width: 90%;
   margin: 0 auto; }
 
+.top-content {
+  position: relative; }
+
 .logo {
   font-family: 'Ubuntu', sans-serif; }
-
-.logo__sub-text {
-  display: block; }
+  .logo__main-text {
+    color: #434343;
+    font-size: 30px; }
+  .logo__sub-text {
+    display: block;
+    color: #333;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    opacity: 0.65; }
 
 .social {
   float: right; }
@@ -33,7 +43,7 @@
     margin: 0;
     padding: 20px 40px;
     list-style-type: none;
-    border-right: 1px solid #2a2b2e;
+    border-right: 1px solid #0c0e13;
     cursor: pointer;
     font-size: 14px;
     line-height: 20px;
@@ -46,7 +56,9 @@
       background-color: #248cec; }
 
 .search-form {
-  float: right; }
+  position: absolute;
+  top: 47px;
+  right: 10px; }
   .search-form input {
     margin-top: 10px;
     width: 200px;
@@ -54,6 +66,9 @@
     background-color: #32353a;
     color: #eee;
     border: 1px solid #000;
+    background-image: url("../img/icons/search.png");
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
     line-height: 20px; }
 
 /* ____________ Carousel _____________*/

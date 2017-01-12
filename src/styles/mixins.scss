@@ -21,6 +21,6 @@
     padding: 0;
 }
 
-@mixin bgIcon($filename) {
+@mixin bg_icon($filename) {
     background-image: url('../img/icons/' + $filename + '.png');
 }
