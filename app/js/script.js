@@ -1,7 +1,7 @@
 $(function() {
 
 //*********** Carousel *********** //
-    $('.jcarousel').jcarousel({
+    $('.slider').jcarousel({
         transitions: true,
         animation: {
             duration: 600,
@@ -10,17 +10,7 @@ $(function() {
         wrap: 'circular'
     });
 
-    $('.jcarousel-control-prev')
-        .jcarouselControl({
-            target: '-=1'
-        });
-
-    $('.jcarousel-control-next')
-        .jcarouselControl({
-            target: '+=1'
-        });
-
-    $('.jcarousel-pagination')
+    $('.slider__controls')
         .on('jcarouselpagination:active', 'a', function() {
             $(this).addClass('active');
         })

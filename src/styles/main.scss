@@ -6,17 +6,13 @@ body {
     // background-color: red;
 }
 
-.top-content,
-.info,
-.slider,
-.content__wrapper {
-    max-width: 1160px;
-    width: 90%;
-    margin: 0 auto;
-}
-
-.top-content {
+.header {
     position: relative;
+    @include container;
+
+    &__social {
+        float: right;
+    }
 }
 
 .logo {
@@ -37,17 +33,16 @@ body {
     }
 }
 
-.social {
-    float: right;
-}
-
 .social__link {
 
 }
 
-.nav {
+.header__nav {
     @include flex_row;
     margin: 0 auto;
+}
+
+.nav {
     background-color: $darkgrey;
     @include ubuntu_condensed;
 
@@ -73,7 +68,7 @@ body {
     }
 }
 
-.search-form {
+.header__search-form {
     position: absolute;
     top: 47px;
     right: 10px;
@@ -92,13 +87,49 @@ body {
     }
 }
 
+/* _____________ Main _____________ */
+
+.content {
+    @include ubuntu;
+
+    &__block {
+        @include container;
+
+        &_full-width {
+            width: 100%;
+        }
+
+        &_columns {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+        }
+    }
+
+    &__heading {
+        padding: 40px;
+        font-size: 24px;
+
+        &_white {
+            color: #fff;
+        }
+    }
+
+    &__column {
+        // display: inline-block;
+        width: 45%;
+
+        &:first-child {
+            margin-right: 40px;
+        }
+    }
+}
+
 /* ____________ Carousel _____________*/
 
 .slider {
     position: relative;
     overflow: hidden;
-    width: 90%;
-    margin: 0 auto;
 
     &__container {
         position: relative;
@@ -110,7 +141,7 @@ body {
         @include reset;
         margin-top: 40px;
         float: left;
-        width: 33.33%;
+        width: 33.333334%;
     }
 
     &__controls {
@@ -253,9 +284,14 @@ body {
 /*_____________ Our service _______________*/
 
 .grid {
-    width: 100%;
     padding-bottom: 40px;
     background-color: $darkgrey;
+
+    &__container {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
 
     &__link {
         position: relative;
@@ -277,7 +313,7 @@ body {
                 align-items: center;
                 top: 0;
                 right: 0;
-                bottom: 70px;
+                bottom: 69px;
                 left: 0;
                 background-color: $lightblue_opaque;
                 color: #fff;
@@ -305,21 +341,73 @@ body {
     }
 }
 
-.content {
-    &__heading {
-        padding: 40px;
-        @include ubuntu;
-        font-size: 24px;
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 45%;
 
-        &_white {
-            color: #fff;
+    &__heading {
+        padding: 40px 0;
+        font-size: 24px;
+    }
+}
+
+.news {
+
+    &__article {
+        position: relative;
+    }
+
+    &__date {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 40px;
+        left: -15px;
+    }
+
+    &__month {
+        padding: 10px 5px;
+        background-color: $blue;
+        color: $white;
+    }
+
+    &__day {
+        padding: 10px 10px;
+        background-color: $orange;
+    }
+
+    &__image {
+        float: left;
+        margin: 3px 20px 20px 0;
+    }
+
+    &__rubric {
+        display: inline-block;
+        margin-right: 10px;
+        color: $lightgrey;
+    }
+
+    &__link {
+        color: $lightblue;
+    }
+
+    &__heading {
+        display: block;
+        margin: 20px 0 10px;
+        font-size: 16px;
+        color: $darkgrey;
+        cursor: pointer;
+        text-decoration: none;
+
+        &:hover {
+            color: $blue;
         }
     }
 
-    &__wrapper {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
+    &__text {
+        color: $grey;
+        font-size: 14px;
+        line-height: 21px;
     }
-
 }

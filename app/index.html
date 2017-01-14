@@ -7,13 +7,14 @@
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
-        <header class="top-content">
+        <header class="header">
+
             <div class="logo">
                 <span class="logo__main-text">Build Home</span>
                 <span class="logo__sub-text">Industrial Theme</span>
             </div>
 
-            <div class="social">
+            <div class="header__social social">
                 <a class="social__link social__link_fb" href="#"></a>
                 <a class="social__link social__link_twitter" href="#"></a>
                 <a class="social__link social__link_rss" href="#"></a>
@@ -21,7 +22,7 @@
                 <a class="social__link social__link_skype" href="#"></a>
             </div>
 
-            <nav class="nav">
+            <nav class="header__nav nav">
                 <a class="nav__item nav__item_active" href="#">Home</a>
                 <a class="nav__item" href="#">Features</a>
                 <a class="nav__item" href="#">Services</a>
@@ -29,16 +30,17 @@
                 <a class="nav__item" href="#">Shop</a>
             </nav>
 
-            <form class="search-form" action="index.html" method="post">
+            <form class="header__search-form" action="index.html" method="post">
                 <input type="text" placeholder="Search...">
             </form>
-
         </header>
+
         <main class="content">
-            <section class="slider jcarousel">
+
+            <section class="content__block slider">
                 <div class="slider__container">
                     <figure class="slider__item">
-                        <img class="slider__image" src="img/slider1.png" alt="Construction"/>
+                        <img src="img/slider1.png" alt="Construction"/>
                         <figcaption class="slider__text">
                             <span class="slider__text_emphasized">Build</span>
                             <span>your</span>
@@ -46,7 +48,7 @@
                         </figcation>
                     </figure>
                     <figure class="slider__item">
-                        <img class="slider__image" src="img/slider1.png" alt="Construction"/>
+                        <img src="img/slider1.png" alt="Construction"/>
                         <figcaption class="slider__text">
                             <span class="slider__text_emphasized">Build</span>
                             <span>your</span>
@@ -54,7 +56,7 @@
                         </figcation>
                     </figure>
                     <figure class="slider__item">
-                        <img class="slider__image" src="img/slider1.png" alt="Construction"/>
+                        <img src="img/slider1.png" alt="Construction"/>
                         <figcaption class="slider__text">
                             <span class="slider__text_emphasized">Build</span>
                             <span>your</span>
@@ -63,9 +65,9 @@
                     </figure>
                 </div>
             </section>
-            <div class="slider__controls jcarousel-pagination"></div>
+            <div class="slider__controls"></div>
 
-            <section class="info">
+            <section class="content__block info">
                 <div class="info__block">
                     <span class="info__num">01</span>
                     <h3 class="info__heading">Power Inside</h3>
@@ -97,48 +99,48 @@
                 </div>
             </section>
 
-            <section class="grid">
+            <section class="content__block_full-width grid">
 
-                <h2 class="content__wrapper content__heading content__heading_white">Our Services</h2>
+                <h2 class="content__block content__heading content__heading_white">Our Services</h2>
 
-                <div class="content__wrapper">
-                <a class="grid__link" href="#">
-                    <figure class="grid__figure">
-                        <img class="grid__image" src="img/service.png" alt="Schedule Services">
-                        <figcaption class="grid__caption">Schedule Services</figcaption>
-                    </figure>
-                </a>
+                <div class="content__block grid__container">
+                    <a class="grid__link" href="#">
+                        <figure class="grid__figure">
+                            <img class="grid__image" src="img/service.png" alt="Schedule Services">
+                            <figcaption class="grid__caption">Schedule Services</figcaption>
+                        </figure>
+                    </a>
 
-                <a class="grid__link" href="#">
-                    <figure class="grid__figure">
-                        <img class="grid__image" src="img/maintence.png" alt="Preventive Maintence">
-                        <figcaption class="grid__caption">Preventive Maintence</figcaption>
-                    </figure>
-                </a>
+                    <a class="grid__link" href="#">
+                        <figure class="grid__figure">
+                            <img class="grid__image" src="img/maintence.png" alt="Preventive Maintence">
+                            <figcaption class="grid__caption">Preventive Maintence</figcaption>
+                        </figure>
+                    </a>
 
-                <a class="grid__link" href="#">
-                    <figure class="grid__figure">
-                        <img class="grid__image" src="img/wheel.png" alt="Tire &amp; Wheel Services">
-                        <figcaption class="grid__caption">Tire &amp; Wheel Services</figcaption>
-                    </figure>
-                </a>
+                    <a class="grid__link" href="#">
+                        <figure class="grid__figure">
+                            <img class="grid__image" src="img/wheel.png" alt="Tire &amp; Wheel Services">
+                            <figcaption class="grid__caption">Tire &amp; Wheel Services</figcaption>
+                        </figure>
+                    </a>
 
-                <a class="grid__link" href="#">
-                    <figure class="grid__figure">
-                        <img class="grid__image" src="img/repare.png" alt="Repair Services">
-                        <figcaption class="grid__caption">Repair Services</figcaption>
-                    </figure>
-                </a>
+                    <a class="grid__link" href="#">
+                        <figure class="grid__figure">
+                            <img class="grid__image" src="img/repare.png" alt="Repair Services">
+                            <figcaption class="grid__caption">Repair Services</figcaption>
+                        </figure>
+                    </a>
 
                 </div>
 
             </section>
 
-            <section class="column news">
+            <div class="content__block content__block_columns">
 
+                <section class="content__column news">
 
-
-                    <h2 class="content__heading">Latest News</h2>
+                    <h2 class="column__heading">Latest News</h2>
 
                     <article class="news__article">
                         <div class="news__date">
@@ -146,7 +148,7 @@
                             <span class="news__day">23</span>
                         </div>
                         <img class="news__image" src="img/mechanical-engineer-design-engineer.png" alt="Mechanical Engineer, Design Engineer">
-                        <h3 class="news__heading">Advanced Machinery Helps Improve Quality</h3>
+                        <a href="#" class="news__heading">Advanced Machinery Helps Improve Quality</a>
                         <div class="news__rubric">by <span class="news__link">cmsmasters</span></div>
                         <div class="news__rubric">Comments (<span class="news__link">6</span>)</div>
                         <p class="news__text">Cum sociis natoque penatibus et magnis dis parturient ontesmus.
@@ -160,7 +162,7 @@
                             <span class="news__day">21</span>
                         </div>
                         <img class="news__image" src="img/electrical-engineer.png" alt="Electrical Engineer">
-                        <h3 class="news__heading">Powerful Techniques for Advanced Service</h3>
+                        <a class="news__heading">Powerful Techniques for Advanced Service</a>
                         <div class="news__rubric">by <span class="news__link">cmsmasters</span></div>
                         <div class="news__rubric">Comments (<span class="news__link">3</span>)</div>
                         <p class="news__text">Cum sociis natoque penatibus et magnis dis parturient ontesmus.
@@ -168,64 +170,66 @@
                              quia ptas sit aspernatur samomo enim ipsam voluptatem.</p>
                     </article>
 
-            </section>
+                </section>
 
-            <section class="column">
+                <section class="content__column">
 
-                <h2 class="content__heading">Banners Place</h2>
+                    <h2 class="content__heading">Banners Place</h2>
 
-                <details>
-                    <summary>Accordion Panel 1</summary>
-                    <p>Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel
-                        nibh et elit mollis commodo et nec augueique Nemo enim ipsam
-                        voluptatem quia ptas sit aspernatur momo. Cum sociis natoque
-                        penatibus et magnis dis parturient ontesmus. Nemo enim ipsam
-                        voluptatem quia ptas sit aspernatur samomoPro vel nibh et elit
-                        mollis commodo et nec augueique Nemo enim ipsam voluptatem quia
-                        ptas sit aspernatur samomo enim ipsam voluptatem.
-                    </p>
-                </details>
+                    <details>
+                        <summary>Accordion Panel 1</summary>
+                        <p>Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel
+                            nibh et elit mollis commodo et nec augueique Nemo enim ipsam
+                            voluptatem quia ptas sit aspernatur momo. Cum sociis natoque
+                            penatibus et magnis dis parturient ontesmus. Nemo enim ipsam
+                            voluptatem quia ptas sit aspernatur samomoPro vel nibh et elit
+                            mollis commodo et nec augueique Nemo enim ipsam voluptatem quia
+                            ptas sit aspernatur samomo enim ipsam voluptatem.
+                        </p>
+                    </details>
 
-                <details>
-                    <summary>Accordion Panel 2</summary>
-                    <p>Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel
-                        nibh et elit mollis commodo et nec augueique Nemo enim ipsam
-                        voluptatem quia ptas sit aspernatur momo. Cum sociis natoque
-                        penatibus et magnis dis parturient ontesmus. Nemo enim ipsam
-                        voluptatem quia ptas sit aspernatur samomoPro vel nibh et elit
-                        mollis commodo et nec augueique Nemo enim ipsam voluptatem quia
-                        ptas sit aspernatur samomo enim ipsam voluptatem.
-                    </p>
+                    <details>
+                        <summary>Accordion Panel 2</summary>
+                        <p>Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel
+                            nibh et elit mollis commodo et nec augueique Nemo enim ipsam
+                            voluptatem quia ptas sit aspernatur momo. Cum sociis natoque
+                            penatibus et magnis dis parturient ontesmus. Nemo enim ipsam
+                            voluptatem quia ptas sit aspernatur samomoPro vel nibh et elit
+                            mollis commodo et nec augueique Nemo enim ipsam voluptatem quia
+                            ptas sit aspernatur samomo enim ipsam voluptatem.
+                        </p>
 
-                </details>
+                    </details>
 
-                <details>
-                    <summary>Accordion Panel 3</summary>
-                    <p>Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel
-                        nibh et elit mollis commodo et nec augueique Nemo enim ipsam
-                        voluptatem quia ptas sit aspernatur momo. Cum sociis natoque
-                        penatibus et magnis dis parturient ontesmus. Nemo enim ipsam
-                        voluptatem quia ptas sit aspernatur samomoPro vel nibh et elit
-                        mollis commodo et nec augueique Nemo enim ipsam voluptatem quia
-                        ptas sit aspernatur samomo enim ipsam voluptatem.
-                    </p>
+                    <details>
+                        <summary>Accordion Panel 3</summary>
+                        <p>Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel
+                            nibh et elit mollis commodo et nec augueique Nemo enim ipsam
+                            voluptatem quia ptas sit aspernatur momo. Cum sociis natoque
+                            penatibus et magnis dis parturient ontesmus. Nemo enim ipsam
+                            voluptatem quia ptas sit aspernatur samomoPro vel nibh et elit
+                            mollis commodo et nec augueique Nemo enim ipsam voluptatem quia
+                            ptas sit aspernatur samomo enim ipsam voluptatem.
+                        </p>
 
-                </details>
+                    </details>
 
-                <details>
-                    <summary>Accordion Panel 4</summary>
-                    <p>Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel
-                        nibh et elit mollis commodo et nec augueique Nemo enim ipsam
-                        voluptatem quia ptas sit aspernatur momo. Cum sociis natoque
-                        penatibus et magnis dis parturient ontesmus. Nemo enim ipsam
-                        voluptatem quia ptas sit aspernatur samomoPro vel nibh et elit
-                        mollis commodo et nec augueique Nemo enim ipsam voluptatem quia
-                        ptas sit aspernatur samomo enim ipsam voluptatem.
-                    </p>
+                    <details>
+                        <summary>Accordion Panel 4</summary>
+                        <p>Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel
+                            nibh et elit mollis commodo et nec augueique Nemo enim ipsam
+                            voluptatem quia ptas sit aspernatur momo. Cum sociis natoque
+                            penatibus et magnis dis parturient ontesmus. Nemo enim ipsam
+                            voluptatem quia ptas sit aspernatur samomoPro vel nibh et elit
+                            mollis commodo et nec augueique Nemo enim ipsam voluptatem quia
+                            ptas sit aspernatur samomo enim ipsam voluptatem.
+                        </p>
 
-                </details>
+                    </details>
 
-            </section>
+                </section>
+
+            </div>
 
             <section class="partners">
                 <a class="partners__link" href="#">
