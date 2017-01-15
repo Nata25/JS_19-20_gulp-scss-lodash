@@ -104,8 +104,7 @@ body {
         }
 
         &_columns {
-            display: flex;
-            flex-flow: row nowrap;
+            @include flex_row;
             justify-content: space-between;
             padding-bottom: 60px;
             font-size: 14px;
@@ -295,8 +294,7 @@ body {
     background-color: $darkgrey;
 
     &__container {
-        display: flex;
-        flex-flow: row nowrap;
+        @include flex_row;
         justify-content: space-between;
     }
 
@@ -315,7 +313,7 @@ body {
 
             &::before {
                 position: absolute;
-                display: flex;
+                @include flex_row;
                 justify-content: center;
                 align-items: center;
                 top: 0;
@@ -469,4 +467,114 @@ body {
         margin-left: 15px;
         color: $grey;
     }
+}
+
+/* _________ Partners ___________ */
+.partners {
+    @include flex_row;
+    justify-content: center;
+    padding: 50px 0;
+
+    &__link {
+        margin: 20px;
+    }
+}
+
+/* ___________ Footer _____________ */
+.footer {
+    width: 100%;
+    background-color: $darkgrey;
+    @include arial;
+    color: $white;
+
+    &__nav {
+        @include flex_row;
+        justify-content: space-between;
+        @include container;
+    }
+
+    &__nav-section {
+        width: 20%;
+        list-style-type: none;
+    }
+
+    &__nav-item {
+        border-bottom: 1px solid rgba(255, 255, 255, .1);
+
+        &:last-child {
+            border: 0;
+        }
+    }
+
+    &__nav-heading {
+        margin: 20px 0 30px;
+        @include ubuntu;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+
+    &__link {
+        display: block;
+        color: inherit;
+        opacity: .3;
+        font-size: 13px;
+        text-decoration: none;
+        line-height: 36px;
+
+        &:hover {
+            color: $blue;
+            opacity: 1;
+        }
+    }
+
+    &__contacts {
+        padding: 20px;
+        background-color: #3a3a3a;
+        color: rgba(255, 255, 255, .2);
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    &__contact-info {
+        position: relative;
+        margin: 0 30px;
+
+        &::before {
+            display: inline-block;
+            position: absolute;
+            top: -1px;
+            left: -20px;
+            content: '';
+            background-size: cover;
+        }
+    }
+
+    &__address::before {
+        width: 12px;
+        height: 16px;
+        @include bg_icon('location');
+    }
+
+    &__tel::before {
+        width: 10px;
+        height: 16px;
+        @include bg_icon('iphone-potrait');
+    }
+
+    &__mail {
+
+        a {
+            @include white_link;
+            opacity: .2;
+        }
+
+        &::before {
+            top: 1px;
+            left: -25px;
+            width: 16px;
+            height: 12px;
+            @include bg_icon('front-email');
+        }
+    }
+
 }
