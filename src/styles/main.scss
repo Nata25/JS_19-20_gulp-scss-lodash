@@ -99,10 +99,17 @@ body {
             width: 100%;
         }
 
+        &_grey {
+            background-color: #f7f7f7;
+        }
+
         &_columns {
             display: flex;
             flex-flow: row nowrap;
-            justify-content: center;
+            justify-content: space-between;
+            padding-bottom: 60px;
+            font-size: 14px;
+            line-height: 21px;
         }
     }
 
@@ -116,11 +123,11 @@ body {
     }
 
     &__column {
-        // display: inline-block;
         width: 45%;
+        // margin-left: 5%;
 
         &:first-child {
-            margin-right: 40px;
+            // margin-right: 40px;
         }
     }
 }
@@ -353,6 +360,7 @@ body {
 }
 
 .news {
+    @include arial;
 
     &__article {
         position: relative;
@@ -397,6 +405,7 @@ body {
         margin: 20px 0 10px;
         font-size: 16px;
         color: $darkgrey;
+        @include ubuntu;
         cursor: pointer;
         text-decoration: none;
 
@@ -407,7 +416,57 @@ body {
 
     &__text {
         color: $grey;
-        font-size: 14px;
-        line-height: 21px;
+    }
+}
+
+.accordion {
+    @include arial;
+
+    &__item {
+        margin-top: 5px;
+        margin-left: 40px;
+
+        &[open] summary,
+        &[open] summary::before {
+            background-color: $orange;
+            color: $white;
+        }
+
+        &[open] summary::before {
+            content: '\2013';
+        }
+    }
+
+    &__summary {
+        position: relative;
+        margin: 3px auto;
+        padding: 15px;
+        color: $darkgrey;
+        @include white_panel;
+        @include ubuntu;
+        text-transform: uppercase;
+        cursor: pointer;
+        outline: none;
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+
+        &::before {
+            position: absolute;
+            top: -1px;
+            left: -45px;
+            padding: 10px 16px 11px;
+            content: '+';
+            font-size: 18px;
+            text-align: center;
+            line-height: 30px;
+            @include white_panel;
+        }
+    }
+
+    &__text {
+        margin-left: 15px;
+        color: $grey;
     }
 }

@@ -23,4 +23,10 @@ $(function() {
             }
         });
 
+        // Accordion
+
+        $(".accordion__summary").click(function(e) {
+            $("details[open]").not($(this).parent()).removeAttr("open");
+        });
+
 }); // end of ready

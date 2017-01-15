@@ -7,6 +7,10 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
+@mixin arial {
+    font-family: Arial, sans-serif;
+}
+
 @mixin ubuntu_condensed {
     font-family: 'Ubuntu Condensed', sans-serif;
 }
@@ -20,6 +24,11 @@
 @mixin white_link {
     color: $white;
     text-decoration: none;
+}
+
+@mixin white_panel {
+    background-color: $white;
+    border: 1px solid #e8e8e8;
 }
 
 @mixin reset {
