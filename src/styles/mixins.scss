@@ -1,6 +1,6 @@
 @mixin flex_row {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
 }
 
 @mixin ubuntu {
@@ -36,6 +36,10 @@
     padding: 0;
 }
 
-@mixin bg_icon($filename) {
+@mixin png_icon($filename) {
     background-image: url('../img/icons/' + $filename + '.png');
+}
+
+@mixin svg_icon($filename) {
+    background-image: url('../img/icons/' + $filename + '.svg');
 }

@@ -9,14 +9,63 @@ body {
 .header {
     position: relative;
     @include container;
+    padding-top: 30px;
+
+    &__logo {
+        margin-bottom: 20px;
+    }
+
+    &__nav {
+        @include flex_row;
+        margin: 0 auto;
+    }
 
     &__social {
-        float: right;
+        display: inline-block;
+        position: absolute;
+        top: 45px;
+        right: 0;
     }
 }
 
 .logo {
+    display: inline-block;
     @include ubuntu;
+
+    &__image {
+        position: relative;
+        @include flex_row;
+        top: 5px;
+        margin-right: 10px;
+        width: 40px;
+        height: 40px;
+        float: left;
+        background-color: #fabd17;
+        @include png_icon('settings-white');
+        background-position: 23px;
+        background-repeat: no-repeat;
+    }
+
+    &__gradient {
+        width: 20px;
+        height: 20px;
+
+        &:first-child {
+            background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.5) 0%, rgba(250, 189, 23, .5) 100%);
+        }
+
+        &:nth-child(2) {
+            background-image: linear-gradient(to top, rgba(255, 255, 255, 0.5) 0%, rgba(227, 143, 19, 0.5) 100%);
+        }
+
+        &:nth-child(3) {
+            background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 213, 97, 0.5) 100%);
+        }
+
+        &:last-child {
+            background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.5) 0%, rgba(250, 204, 65, 0.5) 100%);
+        }
+    }
 
     &__main-text {
         color: #434343;
@@ -29,17 +78,66 @@ body {
         font-size: 12px;
         text-transform: uppercase;
         letter-spacing: 3px;
-        opacity: 0.65;
+        opacity: .7;
     }
 }
 
-.social__link {
+.social {
+    width: 200px;
 
-}
+    &__link {
+        display: inline-block;
+        margin: 0 0 10px 20px;
+        width: 16px;
+        height: 16px;
+        background-size: cover;
 
-.header__nav {
-    @include flex_row;
-    margin: 0 auto;
+        &_fb {
+            width: 14px;
+            @include svg_icon('facebook');
+
+            &:hover {
+                @include svg_icon('facebook-hover');
+            }
+        }
+
+        &_twitter {
+            @include svg_icon('twitter');
+
+            &:hover {
+                @include svg_icon('twitter-hover');
+            }
+        }
+
+        &_rss {
+            width: 14px;
+            height: 14px;
+            @include svg_icon('rss');
+
+            &:hover {
+                @include svg_icon('rss-hover');
+            }
+        }
+
+        &_linkedin {
+            @include svg_icon('linkedin');
+
+            &:hover {
+                @include svg_icon('linkedin-hover');
+            }
+        }
+
+        &_skype {
+            margin-bottom: 9px;
+            width: 15px;
+            height: 15px;
+            @include svg_icon('skype');
+
+            &:hover {
+                @include svg_icon('skype-hover');
+            }
+        }
+    }
 }
 
 .nav {
@@ -70,7 +168,7 @@ body {
 
 .header__search-form {
     position: absolute;
-    top: 47px;
+    top: 97px;
     right: 10px;
 
     input {
@@ -80,7 +178,7 @@ body {
         background-color: #32353a;
         color: #eee;
         border: 1px solid #000;
-        @include bg_icon('search');
+        @include png_icon('search');
         background-repeat: no-repeat;
         background-position: 95% 50%;
         line-height: 20px;
@@ -123,11 +221,6 @@ body {
 
     &__column {
         width: 45%;
-        // margin-left: 5%;
-
-        &:first-child {
-            // margin-right: 40px;
-        }
     }
 }
 
@@ -195,8 +288,6 @@ body {
         display: block;
         color: #f4b60d;
     }
-
-
 }
 
 /*_______________ Info Block ____________ */
@@ -213,15 +304,15 @@ body {
         margin: 0 auto;
 
         &:first-child .info__heading::before {
-            @include bg_icon('settings');
+            @include png_icon('settings');
         }
 
         &:nth-child(2) .info__heading::before {
-            @include bg_icon('params');
+            @include png_icon('params');
         }
 
         &:last-child .info__heading::before {
-            @include bg_icon('truck');
+            @include png_icon('truck');
         }
     }
 
@@ -352,7 +443,7 @@ body {
     flex-basis: 45%;
 
     &__heading {
-        padding: 40px 0;
+        padding: 40px 0 30px;
         font-size: 24px;
     }
 }
@@ -552,13 +643,13 @@ body {
     &__address::before {
         width: 12px;
         height: 16px;
-        @include bg_icon('location');
+        @include png_icon('location');
     }
 
     &__tel::before {
         width: 10px;
         height: 16px;
-        @include bg_icon('iphone-potrait');
+        @include png_icon('iphone-potrait');
     }
 
     &__mail {
@@ -573,7 +664,7 @@ body {
             left: -25px;
             width: 16px;
             height: 12px;
-            @include bg_icon('front-email');
+            @include png_icon('front-email');
         }
     }
 

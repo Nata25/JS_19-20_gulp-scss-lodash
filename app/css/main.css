@@ -9,12 +9,47 @@
   position: relative;
   margin: 0 auto;
   max-width: 1160px;
-  width: 90%; }
+  width: 90%;
+  padding-top: 30px; }
+  .header__logo {
+    margin-bottom: 20px; }
+  .header__nav {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 auto; }
   .header__social {
-    float: right; }
+    display: inline-block;
+    position: absolute;
+    top: 45px;
+    right: 0; }
 
 .logo {
+  display: inline-block;
   font-family: 'Ubuntu', sans-serif; }
+  .logo__image {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    top: 5px;
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    float: left;
+    background-color: #fabd17;
+    background-image: url("../img/icons/settings-white.png");
+    background-position: 23px;
+    background-repeat: no-repeat; }
+  .logo__gradient {
+    width: 20px;
+    height: 20px; }
+    .logo__gradient:first-child {
+      background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.5) 0%, rgba(250, 189, 23, 0.5) 100%); }
+    .logo__gradient:nth-child(2) {
+      background-image: linear-gradient(to top, rgba(255, 255, 255, 0.5) 0%, rgba(227, 143, 19, 0.5) 100%); }
+    .logo__gradient:nth-child(3) {
+      background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 213, 97, 0.5) 100%); }
+    .logo__gradient:last-child {
+      background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.5) 0%, rgba(250, 204, 65, 0.5) 100%); }
   .logo__main-text {
     color: #434343;
     font-size: 30px; }
@@ -24,12 +59,42 @@
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 3px;
-    opacity: 0.65; }
+    opacity: .7; }
 
-.header__nav {
-  display: flex;
-  flex-flow: row nowrap;
-  margin: 0 auto; }
+.social {
+  width: 200px; }
+  .social__link {
+    display: inline-block;
+    margin: 0 0 10px 20px;
+    width: 16px;
+    height: 16px;
+    background-size: cover; }
+    .social__link_fb {
+      width: 14px;
+      background-image: url("../img/icons/facebook.svg"); }
+      .social__link_fb:hover {
+        background-image: url("../img/icons/facebook-hover.svg"); }
+    .social__link_twitter {
+      background-image: url("../img/icons/twitter.svg"); }
+      .social__link_twitter:hover {
+        background-image: url("../img/icons/twitter-hover.svg"); }
+    .social__link_rss {
+      width: 14px;
+      height: 14px;
+      background-image: url("../img/icons/rss.svg"); }
+      .social__link_rss:hover {
+        background-image: url("../img/icons/rss-hover.svg"); }
+    .social__link_linkedin {
+      background-image: url("../img/icons/linkedin.svg"); }
+      .social__link_linkedin:hover {
+        background-image: url("../img/icons/linkedin-hover.svg"); }
+    .social__link_skype {
+      margin-bottom: 9px;
+      width: 15px;
+      height: 15px;
+      background-image: url("../img/icons/skype.svg"); }
+      .social__link_skype:hover {
+        background-image: url("../img/icons/skype-hover.svg"); }
 
 .nav {
   background-color: #2a2d32;
@@ -53,7 +118,7 @@
 
 .header__search-form {
   position: absolute;
-  top: 47px;
+  top: 97px;
   right: 10px; }
   .header__search-form input {
     margin-top: 10px;
@@ -80,7 +145,7 @@
       background-color: #f7f7f7; }
     .content__block_columns {
       display: flex;
-      flex-flow: row nowrap;
+      flex-flow: row wrap;
       justify-content: space-between;
       padding-bottom: 60px;
       font-size: 14px;
@@ -145,7 +210,7 @@
 /*_______________ Info Block ____________ */
 .info {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: space-between;
   font-family: 'Ubuntu', sans-serif; }
   .info__block {
@@ -213,7 +278,7 @@
   background-color: #2a2d32; }
   .grid__container {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-between; }
   .grid__link {
     position: relative;
@@ -226,7 +291,7 @@
     .grid__link:hover::before {
       position: absolute;
       display: flex;
-      flex-flow: row nowrap;
+      flex-flow: row wrap;
       justify-content: center;
       align-items: center;
       top: 0;
@@ -255,7 +320,7 @@
   flex-direction: column;
   flex-basis: 45%; }
   .column__heading {
-    padding: 40px 0;
+    padding: 40px 0 30px;
     font-size: 24px; }
 
 .news {
@@ -338,7 +403,7 @@
 /* _________ Partners ___________ */
 .partners {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: center;
   padding: 50px 0; }
   .partners__link {
@@ -352,7 +417,7 @@
   color: #fff; }
   .footer__nav {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     margin: 0 auto;
     max-width: 1160px;
