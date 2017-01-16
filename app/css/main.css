@@ -5,33 +5,41 @@
   src: url("../fonts/leaguegothic-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/League Gothic.ttf") format("truetype"), url("../fonts/leaguegothic-regular-webfont.woff2") format("woff2"), url("../fonts/leaguegothic-regular-webfont.woff") format("woff"), url("../fonts/LeagueGothic-Regular.otf") format("otf"), url("../fonts/leaguegothic-regular-webfont.svg#league_gothicregular") format("svg");
   font-weight: normal;
   font-style: normal; }
+body {
+  margin: 0;
+  padding: 0; }
+
+/* _____________ Header ____________ */
 .header {
   position: relative;
+  padding: 30px 0 0;
   margin: 0 auto;
   max-width: 1160px;
-  width: 90%;
-  padding-top: 30px; }
+  width: 90%; }
   .header__logo {
-    margin-bottom: 20px; }
-  .header__nav {
-    display: flex;
-    flex-flow: row wrap;
-    margin: 0 auto; }
-  .header__social {
     display: inline-block;
+    margin: 0 0 20px; }
+  .header__nav {
+    margin: 0;
+    padding: 0; }
+  .header__social {
+    margin: 0;
+    padding: 0;
     position: absolute;
+    display: inline-block;
     top: 45px;
     right: 0; }
 
 .logo {
-  display: inline-block;
+  padding: 0;
   font-family: 'Ubuntu', sans-serif; }
   .logo__image {
     position: relative;
     display: flex;
     flex-flow: row wrap;
     top: 5px;
-    margin-right: 10px;
+    margin: 0 10px 0 0;
+    padding: 0;
     width: 40px;
     height: 40px;
     float: left;
@@ -101,7 +109,6 @@
   font-family: 'Ubuntu Condensed', sans-serif; }
   .nav__item {
     display: inline-block;
-    margin: 0;
     padding: 20px 40px;
     list-style-type: none;
     border-right: 1px solid #0c0e13;
@@ -119,11 +126,12 @@
 .header__search-form {
   position: absolute;
   top: 97px;
-  right: 10px; }
+  right: 10px;
+  padding: 0; }
   .header__search-form input {
-    margin-top: 10px;
-    width: 200px;
+    margin: 10px 0 0;
     padding: 10px;
+    width: 200px;
     background-color: #32353a;
     color: #eee;
     border: 1px solid #000;
@@ -134,12 +142,16 @@
 
 /* _____________ Main _____________ */
 .content {
+  padding: 0;
   font-family: 'Ubuntu', sans-serif; }
   .content__block {
     margin: 0 auto;
     max-width: 1160px;
-    width: 90%; }
+    width: 90%;
+    padding: 0; }
     .content__block_full-width {
+      margin: 0;
+      padding: 0;
       width: 100%; }
     .content__block_grey {
       background-color: #f7f7f7; }
@@ -147,15 +159,18 @@
       display: flex;
       flex-flow: row wrap;
       justify-content: space-between;
-      padding-bottom: 60px;
+      padding: 0 0 60px;
       font-size: 14px;
       line-height: 21px; }
   .content__heading {
-    padding: 40px;
-    font-size: 24px; }
+    padding: 40px 0;
+    font-size: 24px;
+    font-family: 'Ubuntu', sans-serif; }
     .content__heading_white {
       color: #fff; }
   .content__column {
+    margin: 0;
+    padding: 0;
     width: 45%; }
 
 /* ____________ Carousel _____________*/
@@ -164,6 +179,8 @@
   overflow: hidden; }
   .slider__container {
     position: relative;
+    margin: 0;
+    padding: 0;
     width: 300%; }
   .slider__item {
     position: relative;
@@ -176,6 +193,7 @@
     position: relative;
     top: -45px;
     margin: 0 auto;
+    padding: 0;
     width: 100px; }
   .slider__switch {
     display: inline-block;
@@ -193,6 +211,7 @@
     top: 210px;
     left: 45px;
     width: 212px;
+    padding: 0;
     color: #fff;
     font-family: 'Ubuntu', sans-serif;
     font-size: 54px;
@@ -217,7 +236,8 @@
     display: flex;
     flex-flow: column wrap;
     flex: 1 0 auto;
-    margin: 0 auto; }
+    margin: 0 auto;
+    padding: 0; }
     .info__block:first-child .info__heading::before {
       background-image: url("../img/icons/settings.png"); }
     .info__block:nth-child(2) .info__heading::before {
@@ -230,12 +250,10 @@
     font-family: 'Ubuntu', sans-serif;
     font-size: 75px;
     color: #2a2b2e;
-    opacity: 0.1; }
+    opacity: .1; }
   .info__heading {
-    margin: 0;
+    margin: 15px 0 15px;
     padding: 0;
-    margin-top: 15px;
-    margin-bottom: 15px;
     color: #2a2b2e;
     font-size: 15px; }
     .info__heading::before {
@@ -246,9 +264,9 @@
       content: '';
       background-repeat: no-repeat; }
   .info__text {
-    width: 250px;
     margin: 0;
     padding: 0;
+    width: 250px;
     color: #8a8a8a;
     font-size: 13px;
     line-height: 20px; }
@@ -302,31 +320,27 @@
       color: #fff;
       content: '+';
       font-size: 50px; }
-  .grid__link, .grid__figure {
+  .grid__figure {
     margin: 0;
     padding: 0; }
   .grid__image {
     width: 100%; }
   .grid__caption {
     margin: 25px;
+    padding: 0;
     text-align: center;
     color: #fff;
     text-decoration: none;
     font-family: 'Ubuntu', sans-serif;
     font-size: 14px; }
 
-.column {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 45%; }
-  .column__heading {
-    padding: 40px 0 30px;
-    font-size: 24px; }
-
+/* ___________ News ___________ */
 .news {
   font-family: Arial, sans-serif; }
   .news__article {
-    position: relative; }
+    position: relative;
+    margin: 0;
+    padding: 0; }
   .news__date {
     display: flex;
     flex-direction: column;
@@ -360,13 +374,14 @@
     .news__heading:hover {
       color: #248cec; }
   .news__text {
+    margin: 20px 0 10px;
+    padding: 0;
     color: #8a8a8a; }
 
 .accordion {
   font-family: Arial, sans-serif; }
   .accordion__item {
-    margin-top: 5px;
-    margin-left: 40px; }
+    margin: 5px 0 0 40px; }
     .accordion__item[open] summary, .accordion__item[open] summary::before {
       background-color: #f4b60d;
       color: #fff; }
@@ -397,7 +412,7 @@
       background-color: #fff;
       border: 1px solid #e8e8e8; }
   .accordion__text {
-    margin-left: 15px;
+    margin: 15px 0 15px 15px;
     color: #8a8a8a; }
 
 /* _________ Partners ___________ */
@@ -412,6 +427,7 @@
 /* ___________ Footer _____________ */
 .footer {
   width: 100%;
+  padding: 0;
   background-color: #2a2d32;
   font-family: Arial, sans-serif;
   color: #fff; }
@@ -423,14 +439,19 @@
     max-width: 1160px;
     width: 90%; }
   .footer__nav-section {
+    margin: 20px 0;
+    padding: 0 0 0 40px;
     width: 20%;
     list-style-type: none; }
   .footer__nav-item {
+    margin: 0;
+    padding: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
     .footer__nav-item:last-child {
       border: 0; }
   .footer__nav-heading {
     margin: 20px 0 30px;
+    padding: 0;
     font-family: 'Ubuntu', sans-serif;
     font-size: 16px;
     text-transform: uppercase; }
@@ -445,6 +466,7 @@
       color: #248cec;
       opacity: 1; }
   .footer__contacts {
+    margin: 0;
     padding: 20px;
     background-color: #3a3a3a;
     color: rgba(255, 255, 255, 0.2);

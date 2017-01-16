@@ -1,24 +1,37 @@
+@mixin reset {
+    margin: 0;
+    padding: 0;
+}
+
 @mixin flex_row {
     display: flex;
     flex-flow: row wrap;
-}
-
-@mixin ubuntu {
-    font-family: 'Ubuntu', sans-serif;
-}
-
-@mixin arial {
-    font-family: Arial, sans-serif;
-}
-
-@mixin ubuntu_condensed {
-    font-family: 'Ubuntu Condensed', sans-serif;
 }
 
 @mixin container {
     margin: 0 auto;
     max-width: 1160px;
     width: 90%;
+}
+
+@mixin ubuntu {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+@mixin ubuntu_condensed {
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+@mixin arial {
+    font-family: Arial, sans-serif;
+}
+
+@mixin corner_gradient($base) {
+    background-image: linear-gradient(-45deg, rgba(255, 255, 255, .5) 0%, $base 100%);
+}
+
+@mixin top_gradient($base) {
+    background-image: linear-gradient(to top, rgba(255, 255, 255, .5) 0%, $base 100%);
 }
 
 @mixin white_link {
@@ -29,11 +42,6 @@
 @mixin white_panel {
     background-color: $white;
     border: 1px solid #e8e8e8;
-}
-
-@mixin reset {
-    margin: 0;
-    padding: 0;
 }
 
 @mixin png_icon($filename) {
